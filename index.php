@@ -6,7 +6,7 @@
 <?php
 	$conn = mysql_connect($host,$user,$pass) or die("connect error");
 	mysql_select_db($db_schema);
-	// get shop product list
+	// get shop member list
 	$result = mysql_query("SELECT * FROM shop LIMIT 6");
 ?>
 <!DOCTYPE html>
@@ -38,13 +38,13 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>아이템 샵 오픈 기념 할인<br />
+											<h1>Cyberone PT Team<br />
 											</h1>
-											<p>최대 20% 할인 중</p>
+											<p>Hello World! XD</p>
 										</header>
-										<p>할인 품목 : 무한의 대검, 삼위일체(매진 임박)</p>
+										<p>Introduce our team.</p>
 										<ul class="actions">
-											<li><a href="product.php" class="button big">할인 보러가기</a></li>
+											<li><a href="member.php" class="button big">More.</a></li>
 										</ul>
 									</div>
 									<span class="image object">
@@ -98,10 +98,10 @@
 									<?php
 										while ($row = mysql_fetch_assoc($result)) {
 											echo '<article>';
-											echo '<a href="product_view.php?no='.$row['prod_no'].'" class="image"><img src="'.$row['prod_image'].'" alt="" /></a>';
+											echo '<a href="member_view.php?no='.$row['prod_no'].'" class="image"><img src="'.$row['prod_image'].'" alt="" /></a>';
 											echo '<h3>'.$row['prod_name'].'</h3>';
 											echo '<p>'.substr($row['prod_inform'],0,100).'... </p>';
-											echo '<ul class="actions"><li><a href="product_view.php?no='.$row['prod_no'].'" class="button">More</a></li></ul></article>';
+											echo '<ul class="actions"><li><a href="member_view.php?no='.$row['prod_no'].'" class="button">More</a></li></ul></article>';
 										}
 									?>
 									</div>
