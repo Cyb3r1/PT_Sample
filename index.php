@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Item shop - 아이템 샵</title>
+		<title>Cyb3r1 House</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -55,35 +55,35 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>아이템 샵 특징</h2>
+										<h2>Cyberone PT Team</h2>
 									</header>
 									<div class="features">
 										<article>
 											<span class="icon fa-diamond"></span>
 											<div class="content">
-												<h3>어디서나 구하기 힘든 레어 아이템</h3>
-												<p>몰락한 왕의 검과 같은 희귀한 아이템을 판매합니다.</p>
+												<h3>Web</h3>
+												<p>Find Vulnerability, more deep.</p>
 											</div>
 										</article>
 										<article>
 											<span class="icon fa-paper-plane"></span>
 											<div class="content">
-												<h3>떳다 떳다 비행기, 해외 배송</h3>
-												<p>종이 비행기를 통해 어느 나라든 배송합니다.</p>
+												<h3>System</h3>
+												<p>Find Vulnerability in your service from simple bof to another technic.</p>
 											</div>
 										</article>
 										<article>
 											<span class="icon fa-rocket"></span>
 											<div class="content">
-												<h3>NASA 적극 지원, 로켓 배송</h3>
-												<p>어느 별에 계시든 1세기 안에 배송합니다.</p>
+												<h3>Mobile</h3>
+												<p>Find Vulnerability in your mobile app.</p>
 											</div>
 										</article>
 										<article>
 											<span class="icon fa-signal"></span>
 											<div class="content">
-												<h3>성장하는 기업</h3>
-												<p>MAMAZON과 같은 대기업에서 지원을 받고 있습니다.</p>
+												<h3>IoT</h3>
+												<p>Find Vulnerability in your IoT devices.</p>
 											</div>
 										</article>
 									</div>
@@ -92,7 +92,7 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>판매중인 상품</h2>
+										<h2>Team member</h2>
 									</header>
 									<div class="posts">
 									<?php

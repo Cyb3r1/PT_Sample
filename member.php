@@ -12,7 +12,7 @@
 
 <html>
 	<head>
-		<title>Item shop - 아이템 샵</title>
+		<title>Cyb3r1 House</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -37,17 +37,17 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>상품</h1>
+										<h1>Team Member </h1>
 									</header>
 
                   <div class="posts">
 									<?php
                   while ($row = mysql_fetch_assoc($result)) {
                     echo '<article>';
-                    echo '<a href="product_view.php?no='.$row['prod_no'].'" class="image"><img src="'.$row['prod_image'].'" alt="" /></a>';
+                    echo '<a href="member_view.php?no='.$row['prod_no'].'" class="image"><img src="'.$row['prod_image'].'" alt="" /></a>';
                     echo '<h3>'.$row['prod_name'].'</h3>';
                     echo '<p>'.substr($row['prod_inform'],0,100).'... </p>';
-                    echo '<ul class="actions"><li><a href="product_view.php?no='.$row['prod_no'].'" class="button">More</a></li></ul></article>';
+                    echo '<ul class="actions"><li><a href="member_view.php?no='.$row['prod_no'].'" class="button">More</a></li></ul></article>';
                   }
 									?>
 									</div>
