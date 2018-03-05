@@ -1,0 +1,127 @@
+<?php
+	require_once "./db.php";
+	session_start();
+?>
+
+<?php
+	$conn = mysql_connect($host,$user,$pass) or die("connect error");
+	mysql_select_db($db_schema);
+	// get shop product list
+	$result = mysql_query("SELECT * FROM shop LIMIT 6");
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Item shop - 아이템 샵</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<?php
+									require_once "header.php";
+								?>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>아이템 샵 오픈 기념 할인<br />
+											</h1>
+											<p>최대 20% 할인 중</p>
+										</header>
+										<p>할인 품목 : 무한의 대검, 삼위일체(매진 임박)</p>
+										<ul class="actions">
+											<li><a href="product.php" class="button big">할인 보러가기</a></li>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="images/3078.png"  style="width: 50%; height: 100%" alt="" />
+									</span>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>아이템 샵 특징</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon fa-diamond"></span>
+											<div class="content">
+												<h3>어디서나 구하기 힘든 레어 아이템</h3>
+												<p>몰락한 왕의 검과 같은 희귀한 아이템을 판매합니다.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-paper-plane"></span>
+											<div class="content">
+												<h3>떳다 떳다 비행기, 해외 배송</h3>
+												<p>종이 비행기를 통해 어느 나라든 배송합니다.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-rocket"></span>
+											<div class="content">
+												<h3>NASA 적극 지원, 로켓 배송</h3>
+												<p>어느 별에 계시든 1세기 안에 배송합니다.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon fa-signal"></span>
+											<div class="content">
+												<h3>성장하는 기업</h3>
+												<p>MAMAZON과 같은 대기업에서 지원을 받고 있습니다.</p>
+											</div>
+										</article>
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>판매중인 상품</h2>
+									</header>
+									<div class="posts">
+									<?php
+										while ($row = mysql_fetch_assoc($result)) {
+											echo '<article>';
+											echo '<a href="product_view.php?no='.$row['prod_no'].'" class="image"><img src="'.$row['prod_image'].'" alt="" /></a>';
+											echo '<h3>'.$row['prod_name'].'</h3>';
+											echo '<p>'.substr($row['prod_inform'],0,100).'... </p>';
+											echo '<ul class="actions"><li><a href="product_view.php?no='.$row['prod_no'].'" class="button">More</a></li></ul></article>';
+										}
+									?>
+									</div>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<?php
+						require_once 'menu.php';
+					?>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
