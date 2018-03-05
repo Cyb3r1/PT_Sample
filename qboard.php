@@ -37,7 +37,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>질문 게시판</h1>
+										<h1>Q/A Board</h1>
 									</header>
 
                   <div class="table-wrapper">

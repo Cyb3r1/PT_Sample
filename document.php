@@ -36,9 +36,9 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>회사 소개</h1>
+										<h1>Document</h1>
 									</header>
-									<p>ㅎㅇ</p>
+									<p>CPP Sample Code (Hello World) : <a href="download.php?f=sample.cpp">Download</a></p>
 								</section>
 
 						</div>

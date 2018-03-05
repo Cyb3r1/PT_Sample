@@ -12,6 +12,7 @@
           <li>
             <span class="opener">Board</span>
             <ul>
+              <li><a href="rboard.php">Notice</a></li>
               <li><a href="fboard.php">Free Board</a></li>
               <li><a href="qboard.php">Q/A Board</a></li>
             </ul>
