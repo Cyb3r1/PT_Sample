@@ -48,7 +48,7 @@
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="images/3078.png"  style="width: 50%; height: 100%" alt="" />
+										<img src="images/cyberone_ci.png"  style="width: 50%; height: 50%" alt="" />
 									</span>
 								</section>
 

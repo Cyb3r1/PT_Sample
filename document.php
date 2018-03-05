@@ -6,12 +6,6 @@
 <?php
 	$conn = mysql_connect($host,$user,$pass) or die("connect error");
 	mysql_select_db($db_schema);
-  if(empty($_GET['no'])){
-    echo "<meta http-equiv='refresh' content='0;url=member.php'>";
-  }
-  $no = (int)$_GET['no'];
-  $result = @mysql_query("SELECT * FROM shop WHERE prod_no={$no}");
-  $row = @mysql_fetch_assoc($result);
 ?>
 <!DOCTYPE HTML>
 
@@ -41,16 +35,10 @@
 
 							<!-- Content -->
 								<section>
-
 									<header class="main">
-										<h1><?php echo $row['prod_name'];?></h1>
+										<h1>회사 소개</h1>
 									</header>
-                  <h2>Slave.</h2><br>
-                  <h2 id="content"></h2>
-                  <img src="<?php echo $row['prod_image'];?>" alt="" />
-                  <p><?php echo $row['prod_inform'];?></p>
-
-
+									<p>ㅎㅇ</p>
 								</section>
 
 						</div>

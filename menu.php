@@ -16,6 +16,7 @@
               <li><a href="qboard.php">Q/A Board</a></li>
             </ul>
           </li>
+          <li><a href="document.php">Document</a></li>
           <?php
           if(isset($_SESSION["is_login"])){
             echo '<li><a href="logout.php">Logout</a></li>';

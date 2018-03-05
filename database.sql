@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for osx10.12 (x86_64)
 --
--- Host: localhost    Database: itemshop
+-- Host: localhost    Database: pt
 -- ------------------------------------------------------
 -- Server version	5.7.17
 
@@ -55,7 +55,7 @@ CREATE TABLE `shop` (
   `prod_inform` text,
   `prod_image` text,
   PRIMARY KEY (`prod_no`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `shop` (
 
 LOCK TABLES `shop` WRITE;
 /*!40000 ALTER TABLE `shop` DISABLE KEYS */;
-INSERT INTO `shop` VALUES (1,'Trinity Force',3700,'GOOD','images/3078.png');
+INSERT INTO `shop` VALUES (2,'shpik',0,'Battle ground Top Tier.<br>and alwayls........XD.','images/shpik.png'),(3,'t0rchwo0d',0,'Upcomming slave.<br>and H.........:p','images/t0rchwo0d.png'),(4,'parca44',0,'Setting King<br>Battleground Good Player(maybe..).<br>Like boy.','images/parca44.png');
 /*!40000 ALTER TABLE `shop` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,4 +103,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-07-23 18:10:10
+-- Dump completed on 2018-03-05 16:24:16
