@@ -12,13 +12,22 @@
 
 <html>
 	<head>
-		<title>Item shop - 아이템 샵</title>
+		<title></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<script>
+		function checkAuth(id) { 
+			if (id != 'admin') {
+				alert('Error!');
+			} else {
+				document.location.href = "rboard_write.php";
+			}
+		}
+	</script>
 	</head>
 	<body>
 
@@ -37,7 +46,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>요청 게시판</h1>
+										<h1>Notice</h1>
 									</header>
 
                   <div class="table-wrapper">
@@ -45,8 +54,8 @@
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>제목</th>
-                          <th>글쓴이</th>
+                          <th>Title</th>
+                          <th>Writer</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -67,10 +76,9 @@
                     </table>
                     <div align="right">
                       <?php
-                        if(isset($_SESSION['is_login'])){
-                          echo '<a href="rboard_write.php" class="button">글쓰기</a>';
-                        }else{
-                          echo '<a href="#" class="button disabled">글쓰기</a>';
+												if(isset($_SESSION['is_login'])){
+													$username = $_SESSION['username'];
+                          echo '<a href="javascript:checkAuth(\'' . $username . '\');" class="button" id="write" >Write</a>';
                         }
                       ?>
                     </div>

@@ -12,7 +12,7 @@
 
 <html>
 	<head>
-		<title>Item shop - 아이템 샵</title>
+		<title>Cyb3r1 House</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -45,8 +45,8 @@
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>제목</th>
-                          <th>글쓴이</th>
+                          <th>Title</th>
+                          <th>Writer</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -68,9 +68,9 @@
                     <div align="right">
                       <?php
                         if(isset($_SESSION['is_login'])){
-                          echo '<a href="fboard_write.php" class="button">글쓰기</a>';
+                          echo '<a href="fboard_write.php" class="button">Write</a>';
                         }else{
-                          echo '<a href="#" class="button disabled">글쓰기</a>';
+                          echo '<a href="#" class="button disabled">Write</a>';
                         }
                       ?>
                     </div>

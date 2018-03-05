@@ -12,7 +12,7 @@
 
 <html>
 	<head>
-		<title>Item shop - 아이템 샵</title>
+		<title>Cyb3r1 House</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -38,20 +38,20 @@
 								<section>
 									<header class="main">
 										<h1>요청 게시판</h1>
-                    <h2> 글쓰기 </h2>
+                    <h2> Write </h2>
 									</header>
 
                   <form method="post" action="rboard_write_chk.php">
                     <div class="row uniform">
                       <div class="12u$">
-                        <input type="text" name="title" id="title" value="" placeholder="제목" />
+                        <input type="text" name="title" id="title" value="" placeholder="Title" />
                       </div>
                       <div class="12u$">
                         <textarea name="content" id="content" placeholder="내용" rows="6"></textarea>
                       </div>
                       <!-- Break -->
                       <div>
-                          <input type="submit" value="글쓰기" class="special" />
+                          <input type="submit" value="Write" class="special" />
                           <input type="reset" value="초기화" />
                       </div>
                     </div>

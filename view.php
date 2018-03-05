@@ -22,7 +22,7 @@
 
 <html>
 	<head>
-		<title>Item shop - 아이템 샵</title>
+		<title>Cyb3r1 House</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
