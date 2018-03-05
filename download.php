@@ -10,7 +10,7 @@
 	$path = '/var/www/html/data/'.$fn;
 
 	header('Content-Type: application/x-octetstream');
-	header('Content-Disposition: attachment; filename="${fn}"');
+	header('Content-Disposition: attachment; filename="'.$fn.'"');
 	header('Content-Length: '.filesize($path));
 	header('Content-Transfer-Encoding: binary');
 
