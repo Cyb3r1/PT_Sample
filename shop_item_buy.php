@@ -42,7 +42,7 @@
 				echo '</script>';	
 			*/
 
-			echo '</script>alert("You bought the product ($' . $post_price . ')");document.location.href="shop.php"</script>';			
+			echo '<script>alert("You bought the product ($' . $post_price . ')");document.location.href="shop.php";</script>';			
 
 			require_once 'menu.php';
 		?>
