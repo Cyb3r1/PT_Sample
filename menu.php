@@ -27,6 +27,8 @@
           }
           ?>
           <li><a href="join.php">Join</a></li>
+          <br>
+          <li><a href="profile.php">Profile</a></li>
         </ul>
       </nav>
 

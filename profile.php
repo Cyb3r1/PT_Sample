@@ -6,7 +6,13 @@
 <?php
 	$conn = mysql_connect($host,$user,$pass) or die("connect error");
 	mysql_select_db($db_schema);
-  $result = mysql_query("SELECT * FROM freeB order by freeB_no desc");
+	$no = (int)$_GET['userno']
+	$result = @mysql_query("SELECT * FROM user WHERE user_no=${no};");
+    $row = @mysql_fetch_assoc($result);
+    if(!$row){
+    	echo "<script>alert('Error occured!');</script>";
+    	echo "<meta http-equiv='refresh' content='0;url=login.php'>";
+    }
 ?>
 <!DOCTYPE HTML>
 
@@ -37,26 +43,24 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Q/A Board</h1>
-                    <h2> Write </h2>
+										<h1>Profile</h1>
 									</header>
+									<form method="post" action="changepw.php">
+				                    <div class="row uniform">
 
-                  <form method="post" action="qboard_write_chk.php">
-                    <div class="row uniform">
-                      <div class="12u$">
-                        <input type="text" name="title" id="title" value="" placeholder="Title" />
-                      </div>
-                      <div class="12u$">
-                        <textarea name="content" id="content" placeholder="내용" rows="6"></textarea>
-                      </div>
-                      <!-- Break -->
-                      <div>
-                          <input type="submit" value="Write" class="special" />
-                          <input type="reset" value="초기화" />
-                      </div>
-                    </div>
-                  </form>
-
+				                      <div class="12u$">
+									<p>Username : <?php echo $row['user_name']; ?></p>
+									<p>ID : <?php echo $row['user_id']; ?></p>
+									<!--<p>Current Password : <input type="text" name="oldpw" id="oldpw" value="" placeholder="Old Password..." /></p>-->
+									<p>Password : <input type="text" name="newpw" id="newpw" value="" placeholder="New Password..." /></p>
+									<input type="hidden" name="no" value="<?php echo $no;?>">     
+				                      </div>
+				                   
+				                      <div>
+				                          <input type="submit" value="Password change" class="special" />
+				                      </div>
+				                    </div>
+				                  </form>
 								</section>
 
 						</div>

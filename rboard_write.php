@@ -37,7 +37,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>요청 게시판</h1>
+										<h1>Notice</h1>
                     <h2> Write </h2>
 									</header>
 

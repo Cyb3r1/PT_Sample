@@ -37,7 +37,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>자유 게시판</h1>
+										<h1>Free Board</h1>
                     <h2> Write </h2>
 									</header>
 
