@@ -10,7 +10,7 @@
           <li><a href="company.php">Cyberone PT?</a></li>
           <li><a href="member.php">Member</a></li>
 	  <!-- 2018.03.06 - Add Shop Menu -->
-	  <li><a href="shop.php">Shop</a><li>
+	  <li><a href="shop.php">Shop</a></li>
           <li>
             <span class="opener">Board</span>
             <ul>
