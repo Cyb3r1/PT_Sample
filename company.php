@@ -36,9 +36,9 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>회사 소개</h1>
+										<h1>Cyberone PT</h1>
 									</header>
-									<p>ㅎㅇ</p>
+									<p>Why so serius?</p>
 								</section>
 
 						</div>

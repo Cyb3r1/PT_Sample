@@ -17,6 +17,7 @@
     if($row){
       $_SESSION['is_login'] = 1;
       $_SESSION['username'] = $row['user_id'];
+      $_SESSION['no'] = $row['user_no'];
       echo '<script>alert("Login Success");</script>';
       echo "<meta http-equiv='refresh' content='0;url=index.php'>";
     }else{
