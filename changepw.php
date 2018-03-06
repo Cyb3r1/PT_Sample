@@ -15,10 +15,10 @@
     
     if(mysql_errno()){
       echo '<script>alert("Error");</script>';
-      echo "<meta http-equiv='refresh' content='0;url=profile.php'>";
+      echo "<meta http-equiv='refresh' content='0;url=profile.php?userno=".$no."'>";
     }else{
       echo '<script>alert("Success");</script>';
-      echo "<meta http-equiv='refresh' content='0;url=profile.php'>";
+      echo "<meta http-equiv='refresh' content='0;url=profile.php?userno=".$no."'>";
     }
   }
 ?>
