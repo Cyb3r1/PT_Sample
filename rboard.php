@@ -1,6 +1,5 @@
 <?php
-	require_once "./db.php";
-	session_start();
+	require_once "./db.php";session_start();
 ?>
 
 <?php
@@ -76,10 +75,10 @@
                     </table>
                     <div align="right">
                       <?php
-												if(isset($_SESSION['is_login'])){
-													$username = $_SESSION['username'];
+			#if(isset($_SESSION['is_login'])){
+			  $username = $_SESSION['username'];
                           echo '<a href="javascript:checkAuth(\'' . $username . '\');" class="button" id="write" >Write</a>';
-                        }
+                       #}
                       ?>
                     </div>
                   </div>
