@@ -6,6 +6,12 @@
 <?php
 	$conn = mysql_connect($host,$user,$pass) or die("connect error");
 	mysql_select_db($db_schema);
+  if(empty($_GET['no'])){
+    echo "<meta http-equiv='refresh' content='0;url=member.php'>";
+  }
+  $no = (int)$_GET['no'];
+  $result = @mysql_query("SELECT * FROM shop WHERE prod_no={$no}");
+  $row = @mysql_fetch_assoc($result);
 ?>
 <!DOCTYPE HTML>
 
@@ -35,30 +41,25 @@
 
 							<!-- Content -->
 								<section>
+
 									<header class="main">
-										<h1>Join</h1>
+										<h1><?php echo $row['prod_name'].'($'.$row['prod_price'].')'.;?></h1>
 									</header>
-                  <form method="post" action="join_chk.php">
-                    <div class="row uniform">
-                      <div class="12u$">
-                        <input type="text" name="name" id="name" value="" placeholder="name..." />
-                      </div>
-                      <div class="12u$">
-                        <input type="text" name="id" id="id" value="" placeholder="id..." />
-                      </div>
-                      <div class="12u$">
-                        <input type="password" name="pw" id="pw" value="" placeholder="password..." />
-                      </div>
-                      <div class="12u$">
-                        <input type="text" name="email" id="email" value="" placeholder="email..." />
-		      </div>
-                      <div class="12u$">
-                        <ul class="actions">
-                          <li><input type="submit" value="Join" class="special" /></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </form>
+                  <h2>Slave.</h2><br>
+                  <h2 id="content"></h2>
+                  <img src="<?php echo $row['prod_image'];?>" alt="" style="width:300px; height:300px;"/>
+                  <p><?php echo $row['prod_inform'];?></p>
+		  <form method="post" action="shop_item_buy.php">
+		  	<input type="hidden" name="prod_no" id="prod_no" value="<?=$row['prod_no']?>" />
+		  	<input type="hidden" name="prod_name" id="prod_name" value="<?=$row['prod_name']?>" />
+		  	<input type="hidden" name="prod_price" id="prod_price" value="<?=$row['prod_price']?>" />
+			<div class="row uniform">
+			 	<div>
+					<input type="submit" value="Buy" class="special"/>
+				</div>	
+			</div>
+	     	  </form>
+
 
 								</section>
 

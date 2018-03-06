@@ -6,6 +6,7 @@
 <?php
 	$conn = mysql_connect($host,$user,$pass) or die("connect error");
 	mysql_select_db($db_schema);
+  $result = mysql_query("SELECT * FROM shop");
 ?>
 <!DOCTYPE HTML>
 
@@ -36,29 +37,20 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Join</h1>
+										<h1>Shop</h1>
 									</header>
-                  <form method="post" action="join_chk.php">
-                    <div class="row uniform">
-                      <div class="12u$">
-                        <input type="text" name="name" id="name" value="" placeholder="name..." />
-                      </div>
-                      <div class="12u$">
-                        <input type="text" name="id" id="id" value="" placeholder="id..." />
-                      </div>
-                      <div class="12u$">
-                        <input type="password" name="pw" id="pw" value="" placeholder="password..." />
-                      </div>
-                      <div class="12u$">
-                        <input type="text" name="email" id="email" value="" placeholder="email..." />
-		      </div>
-                      <div class="12u$">
-                        <ul class="actions">
-                          <li><input type="submit" value="Join" class="special" /></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </form>
+
+                  <div class="posts">
+									<?php
+                  while ($row = mysql_fetch_assoc($result)) {
+                    echo '<article>';
+                    echo '<a href="shop_item_view.php?no='.$row['prod_no'].'" class="image"><img src="'.$row['prod_image'].'" alt="" /></a>';
+                    echo '<h3>'.$row['prod_name'].'($'.$row['prod_price'].')'.'</h3>';
+                    echo '<p>'.substr($row['prod_inform'],0,100).'... </p>';
+                    echo '<ul class="actions"><li><a href="shop_item_view.php?no='.$row['prod_no'].'" class="button">More</a></li></ul></article>';
+                  }
+									?>
+									</div>
 
 								</section>
 
