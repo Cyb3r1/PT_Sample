@@ -43,7 +43,7 @@
 								<section>
 
 									<header class="main">
-										<h1><?php echo $row['prod_name'].'($'.$row['prod_price'].')'.;?></h1>
+										<h1><?php echo $row['prod_name'].'($'.$row['prod_price'].')';?></h1>
 									</header>
                   <h2>Slave.</h2><br>
                   <h2 id="content"></h2>
