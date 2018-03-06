@@ -6,7 +6,7 @@
 <?php
 	$conn = mysql_connect($host,$user,$pass) or die("connect error");
 	mysql_select_db($db_schema);
-	$no = (int)$_GET['userno']
+	$no = (int)$_GET['userno'];
 	if(empty($no)){
 		echo "<script>alert('Error occured!');</script>";
     	echo "<meta http-equiv='refresh' content='0;url=login.php'>";
