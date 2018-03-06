@@ -36,7 +36,7 @@
 			if ($saved_price != $post_price) {
 				echo 'alert("ERROR!!");history.back(-1);';
 			} else {
-				echo 'alert("OK!!);history.back(-2);';
+				echo 'alert("OK!!");history.back(-2);';
 			}
 			echo '</script>';	
 	
