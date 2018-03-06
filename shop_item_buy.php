@@ -32,6 +32,7 @@
 			$post_price = $_POST['prod_price'];
 			
 			echo '<script>';
+			echo 'alert("'.$post_price.'");';
 			if ($saved_price != $post_price) {
 				echo 'alert("ERROR!!");history.back(-1);';
 			} else {
