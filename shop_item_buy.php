@@ -28,9 +28,10 @@
 	<body>
 		<!-- Sidebar -->
 		<?php
+			
 			$saved_price = $row['prod_price'];
 			$post_price = $_POST['prod_price'];
-			
+			/*
 			echo '<script>';
 			if ($saved_price != $post_price) {
 				echo 'alert("ERROR!!");history.back(-1);';
@@ -38,7 +39,10 @@
 				echo 'alert("OK!!");document.location.href="shop.php"';
 			}
 			echo '</script>';	
-	
+			*/
+
+			echo '</script>alert("You bought the product (\'$'.$post_price\.'\');document.location.href="shop.php"</script>';			
+
 			require_once 'menu.php';
 		?>
 
