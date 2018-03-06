@@ -33,9 +33,9 @@
 			
 			echo '<script>';
 			if ($saved_price != $post_price) {
-				echo 'alert("ERROR!!");document.location.href="index.php";';
+				echo 'alert("ERROR!!");history.back(-1);';
 			} else {
-				echo 'alert("OK!!");history.back(-3);';
+				echo 'alert("OK!!");document.location.href="shop.php"';
 			}
 			echo '</script>';	
 	
