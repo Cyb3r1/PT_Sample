@@ -7,7 +7,11 @@
 	$conn = mysql_connect($host,$user,$pass) or die("connect error");
 	mysql_select_db($db_schema);
 	$no = (int)$_GET['userno']
-	$result = @mysql_query("SELECT * FROM user WHERE user_no=${no};");
+	if(empty($no)){
+		echo "<script>alert('Error occured!');</script>";
+    	echo "<meta http-equiv='refresh' content='0;url=login.php'>";
+	}
+	$result = @mysql_query("SELECT * FROM user WHERE user_no='${no}';");
     $row = @mysql_fetch_assoc($result);
     if(!$row){
     	echo "<script>alert('Error occured!');</script>";

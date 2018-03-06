@@ -28,7 +28,7 @@
           ?>
           <li><a href="join.php">Join</a></li>
           <br>
-          <li><a href="profile.php">Profile</a></li>
+          <li><a href="profile.php?userno=<?php echo $_SESSION['no'];?>">Profile</a></li>
         </ul>
       </nav>
 
