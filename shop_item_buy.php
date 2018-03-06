@@ -10,7 +10,7 @@
     echo "<meta http-equiv='refresh' content='0;url=member.php'>";
   }
   $no = (int)$_POST['prod_no'];
-  $result = @mysql_query("SELECT * FROM shop WHERE prod_no={$no}");
+  $result = @mysql_query("SELECT * FROM shop WHERE prod_no=${no}");
   $row = @mysql_fetch_assoc($result);
 ?>
 <!DOCTYPE HTML>
