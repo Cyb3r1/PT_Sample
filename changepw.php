@@ -11,7 +11,7 @@
   if(!empty($_POST['no'])){
     $newpw = sha1(mysql_real_escape_string($_POST['newpw']));
     $no = $_POST['no'];
-    @mysql_query("UPDATE user SET user_pw='${newpw}' WHERE user_no=${no}")
+    @mysql_query("UPDATE user SET user_pw='${newpw}' WHERE user_no=${no}");
     
     if(mysql_errno()){
       echo '<script>alert("Error");</script>';
