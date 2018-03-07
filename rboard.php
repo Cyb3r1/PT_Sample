@@ -21,7 +21,7 @@
 	<script>
 		function checkAuth(id) { 
 			if (id != 'admin') {
-				alert('Error!');
+				alert('You are not Webmaster!');
 			} else {
 				document.location.href = "rboard_write.php";
 			}
