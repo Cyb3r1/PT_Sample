@@ -41,7 +41,7 @@
                     <h2> Write </h2>
 									</header>
 
-                  <form method="post" action="fboard_write_chk.php">
+                  <form method="post" enctype="multipart/form-data" action="fboard_write_chk.php">
                     <div class="row uniform">
                       <div class="12u$">
                         <input type="text" name="title" id="title" value="" placeholder="Title" />
@@ -51,7 +51,7 @@
                       </div>
                       <!-- Break -->
                       <div class="12u$">
-                        <input type="file" name="attachment" id="attachment"></textarea>
+                        <input type="file" name="attachment" id="attachment">
                       </div>
                       <div>
                           <input type="submit" value="Write" class="special" />

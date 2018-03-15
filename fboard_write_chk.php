@@ -15,8 +15,9 @@
         echo "<script>alert('Error occure, contact admin!');history.back();</script>";
       }
     }else{
-      $ced_attachments = '';
+      $attachments = '';
     }
+    echo "<script>alert('{$attachments}');</script>";
     #echo "INSERT INTO user(user_name, user_id, user_pw) VALUES ('{$name}','{$id}','{$pw}');";
     @mysql_query("INSERT INTO freeB(freeB_title, freeB_content, freeB_author, freeB_type, freeB_attachment) VALUES ('{$title}','{$content}','{$author}','fboard','{$attachments}');");
     if(mysql_errno()){
