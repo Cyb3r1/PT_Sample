@@ -50,6 +50,9 @@
                         <textarea name="content" id="content" placeholder="내용" rows="6"></textarea>
                       </div>
                       <!-- Break -->
+                      <div class="12u$">
+                        <input type="file" name="attachment" id="attachment"></textarea>
+                      </div>
                       <div>
                           <input type="submit" value="Write" class="special" />
                           <input type="reset" value="초기화" />

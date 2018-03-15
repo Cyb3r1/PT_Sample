@@ -50,8 +50,10 @@
 									<header class="main">
 										<h1><?php echo $row['freeB_title'];?></h1>
 									</header>
-                  <h2 id="content"></h2>
-                  <p><?php echo $row['freeB_content'];?></p>
+					                <h2 id="content"></h2>
+					                <p><?php echo $row['freeB_content'];?></p>
+					                <p></p>
+					                <p><?php if($row['freeB_attachment']!='') echo '<a href="download.php?f='.$row['freeB_attachment'].'">Download</a>'?></p>
 
 
 								</section>
