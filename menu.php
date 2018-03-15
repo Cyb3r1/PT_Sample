@@ -5,6 +5,12 @@
         <header class="major">
           <h2>Menu</h2>
         </header>
+        <?php if(isset($_SESSION['username'])){
+        ?>
+        <ul>
+        Hello, <?php echo $_SESSION['username'];?>
+        <?php } ?>
+        </ul><hr>
         <ul>
           <li><a href="index.php">Home</a></li>
           <li><a href="company.php">Cyberone PT?</a></li>
