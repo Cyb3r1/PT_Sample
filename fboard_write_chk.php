@@ -10,14 +10,14 @@
     $author = $_SESSION['username'];
     if(is_uploaded_file($_FILES['attachment']['tmp_name'])){
       $fn = str_replace("'","",$_FILES['attachment']['name']);
-      $attachments = '/var/www/html/data/'.$fn.'_'.date('YmdHis',time());
+      $attachments = '/var/www/html/data/'.explode('.',$fn)[0].'_'.date('YmdHis',time()).'.'.explode('.',$fn)[1];
       if(!move_uploaded_file($_FILES['attachment']['tmp_name'], $attachments)){
         echo "<script>alert('Error occure, contact admin!');history.back();</script>";
       }
     }else{
       $attachments = '';
     }
-    echo "<script>alert('{$attachments}');</script>";
+#    echo "<script>alert('{$attachments}');</script>";
     #echo "INSERT INTO user(user_name, user_id, user_pw) VALUES ('{$name}','{$id}','{$pw}');";
     @mysql_query("INSERT INTO freeB(freeB_title, freeB_content, freeB_author, freeB_type, freeB_attachment) VALUES ('{$title}','{$content}','{$author}','fboard','{$attachments}');");
     if(mysql_errno()){
